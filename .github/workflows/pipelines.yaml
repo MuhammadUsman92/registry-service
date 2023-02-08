@@ -46,7 +46,7 @@ jobs:
 
       - name: Get GKE Credentials
         run: |-
-          gcloud container clusters get-credentials fyp-cluster --zone us-south1-a --project github-actions-gke-374504 -f
+          gcloud container clusters get-credentials fyp-cluster --region us-south1 --zone us-south1-a --project github-actions-gke-374504 
 
       - name: Build Docker Image
         run: |-
