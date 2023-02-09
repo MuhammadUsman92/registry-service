@@ -7,7 +7,6 @@ on:
 
 env:
   PROJECT_ID: ${{secrets.GKE_PROJECT}}
-  GAR_LOCATION: us-south1 # TODO: update region of the Artifact Registry
   GKE_CLUSTER: fyp-cluster    # TODO: update to cluster name
   GKE_ZONE: us-south1-a   # TODO: update to cluster zone
   DEPLOYMENT_NAME: gke-registry-service # TODO: update to deployment name
@@ -47,7 +46,7 @@ jobs:
 
       - name: Get GKE Credentials
         run: |-
-          gcloud container clusters get-credentials "$GKE_CLUSTER" --zone "$GKE_ZONE" --project ${{secrets.GKE_PROJECT}}
+          gcloud container clusters get-credentials "$GKE_CLUSTER" --zone "$GKE_ZONE" --project "${{secrets.GKE_PROJECT}}"
 
       - name: Build Docker Image
         run: |-
