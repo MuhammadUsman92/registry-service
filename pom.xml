@@ -55,21 +55,6 @@
 				<artifactId>kubernetes-maven-plugin</artifactId>
 				<version>1.10.1</version>
 			</plugin>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<mainClass>com.muhammadusman92.registryservic.RegistryServiceApplication</mainClass>
-				</configuration>
-
-				<executions>
-					<execution>
-						<goals>
-							<goal>package</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
 
 		</plugins>
 	</build>
